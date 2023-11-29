@@ -125,6 +125,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           if (await _auth.login(_emailcontroller.text,
                               _passwordcontroller.text)) {
                             Navigator.pushReplacementNamed(context, '/home');
+                          } else {
+                            print("Invalid credentials");
                           }
                           setState(() {
                             isLoading = false;
